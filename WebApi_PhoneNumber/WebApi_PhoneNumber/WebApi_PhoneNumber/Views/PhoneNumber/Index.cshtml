@@ -1,0 +1,23 @@
+﻿@model WebApi_PhoneNumber.Models.PhoneNumberModel
+
+<form asp-action="GetCorrectPhoneNumber" method="post" class="form-horizontal" role="form">
+    <h4>Enter international country codes separating by whitespace delimiter and phone number.</h4>
+    <div>
+        <label asp-for="InputCountryCodes">Enter country codes</label>
+        <div class="col-md-5">
+            <input asp-for="InputCountryCodes" class="form-control" size="30" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="InputPhoneNumber">Enter phone number</label>
+        <div class="col-md-5">
+            <input asp-for="InputPhoneNumber" class="form-control" size="30" />
+            <span asp-validation-for="InputPhoneNumber" class="text-danger"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Check phone number" />
+        </div>
+    </div>
+</form>
